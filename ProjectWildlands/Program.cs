@@ -6,7 +6,7 @@ namespace projectWildlands
         {
             System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
             System.Console.WriteLine("Welcome to the Wilderness Research Program.");
-            //string.IsNullOrWhiteSpace
+
             var explorerName = "";
             do
             {
@@ -18,9 +18,19 @@ namespace projectWildlands
             System.Console.WriteLine("Are you ready to begin your adventure? [Y] Yes [N] No");
             //Add if statements
             var adventureSelection = Console.ReadLine();
-
-            System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
-            System.Console.WriteLine("Your adventure awaits");
+            if (adventureSelection == "Y" || adventureSelection == "y")
+            {
+                System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
+                System.Console.WriteLine("Your adventure awaits");
+            }
+            else if (adventureSelection == "N" || adventureSelection == "n")
+            {
+                System.Console.WriteLine("Your adventure awaits your return!");
+            }
+            else
+            {
+                System.Console.WriteLine("Invalid Input Restart");
+            }
         }
     }
 }
