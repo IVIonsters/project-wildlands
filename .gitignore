@@ -1,0 +1,33 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Build and test artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+TestResults/
+*.trx
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Logs
+*.log
