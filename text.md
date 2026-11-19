@@ -28,3 +28,5 @@ Your selection: Y
 Your adventure begins!
 
 Success condition: You can run the application, enter a name, and get the correct response based on your choice without the application crashing.
+
+Extra credit: Handle unexpected answers such as "maybe" or an empty response.
