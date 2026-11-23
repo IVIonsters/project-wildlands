@@ -67,6 +67,9 @@ namespace projectWildlands
             System.Console.WriteLine("Thank you playing Project Wildlands!");
             keepPlaying = false;
             break;
+            default:
+            System.Console.WriteLine("Invalid Input , Please Try Again!");
+            break;
           }
         }
             }
