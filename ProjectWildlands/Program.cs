@@ -40,6 +40,35 @@ namespace projectWildlands
                 System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
                 System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
                 System.Console.WriteLine("Welcome, " + explorerName + " Your adventure awaits");
+                //Game on Value
+                bool keepPlaying = true;
+                while(keepPlaying)
+        {
+          System.Console.WriteLine("===== MAIN MENU =====\n");
+          System.Console.WriteLine("[1] Explore Wilderness");
+          System.Console.WriteLine("[2] Research Journal");
+          System.Console.WriteLine("[3] Inventory");
+          System.Console.WriteLine("[4] Exit Game");
+          System.Console.Write("Enter Your Choice: ");
+          var menuChoice = Console.ReadLine();
+          // Print user choice here - EX: Into the wilderness
+          switch(menuChoice)
+          {
+            case "1":
+            System.Console.WriteLine("You venture into the wilderness...");
+            break;
+            case "2":
+            System.Console.WriteLine("Opening your research journal...");
+            break;
+            case "3":
+            System.Console.WriteLine("Opening Inventory....");
+            break;
+            case "4":
+            System.Console.WriteLine("Thank you playing Project Wildlands!");
+            keepPlaying = false;
+            break;
+          }
+        }
             }
             else
             {
