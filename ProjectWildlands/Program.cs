@@ -38,7 +38,8 @@ namespace projectWildlands
             if (adventureSelection == "Y")
             {
                 System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
-                System.Console.WriteLine("Your adventure awaits");
+                System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
+                System.Console.WriteLine("Welcome, " + explorerName + " Your adventure awaits");
             }
             else
             {
