@@ -51,8 +51,12 @@ namespace projectWildlands
           System.Console.WriteLine("[4] Exit Game");
           System.Console.Write("Enter Your Choice: ");
           var menuChoice = Console.ReadLine();
-          // Print user choice here - EX: Into the wilderness
-          switch (menuChoice)
+          if (menuChoice is null)
+          {
+            return;
+          }
+          var userSelection = menuChoice.Trim();
+          switch (userSelection)
           {
             case "1":
               System.Console.WriteLine("You venture into the wilderness...");
