@@ -1,48 +1,48 @@
 namespace projectWildlands
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+      System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
+      System.Console.WriteLine("Welcome to the Wilderness Research Program.");
+
+      string? explorerName = null;
+      do
+      {
+        System.Console.Write("Let's Enter Your Name: ");
+        explorerName = Console.ReadLine();
+        if (explorerName is null)
         {
-            System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
-            System.Console.WriteLine("Welcome to the Wilderness Research Program.");
+          return;
+        }
+      } while (string.IsNullOrWhiteSpace(explorerName));
 
-            string? explorerName = null;
-            do
-            {
-                System.Console.Write("Let's Enter Your Name: ");
-                explorerName = Console.ReadLine();
-                if (explorerName is null)
-                {
-                    return;
-                }
-            } while (string.IsNullOrWhiteSpace(explorerName));
+      System.Console.WriteLine("Welcome, Explorer " + explorerName + "\n");
 
-            System.Console.WriteLine("Welcome, Explorer " + explorerName + "\n");
-
-            var adventureSelection = "";
-            do
-            {
-                System.Console.WriteLine("Are you ready to begin your adventure? [Y] Yes [N] No");
-                var input = Console.ReadLine();
-                if (input is null)
-                {
-                    return;
-                }
-                adventureSelection = input.Trim().ToUpperInvariant();
-                if (adventureSelection != "Y" && adventureSelection != "N")
-                {
-                    System.Console.WriteLine("Invalid input. Please enter Y or N ");
-                }
-            } while (adventureSelection != "Y" && adventureSelection != "N");
-            if (adventureSelection == "Y")
-            {
-                System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
-                System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
-                System.Console.WriteLine("Welcome, " + explorerName + " Your adventure awaits");
-                //Game on Value
-                bool keepPlaying = true;
-                while(keepPlaying)
+      var adventureSelection = "";
+      do
+      {
+        System.Console.WriteLine("Are you ready to begin your adventure? [Y] Yes [N] No");
+        var input = Console.ReadLine();
+        if (input is null)
+        {
+          return;
+        }
+        adventureSelection = input.Trim().ToUpperInvariant();
+        if (adventureSelection != "Y" && adventureSelection != "N")
+        {
+          System.Console.WriteLine("Invalid input. Please enter Y or N ");
+        }
+      } while (adventureSelection != "Y" && adventureSelection != "N");
+      if (adventureSelection == "Y")
+      {
+        System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
+        System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
+        System.Console.WriteLine("Welcome, " + explorerName + " Your adventure awaits");
+        //Game on Value
+        bool keepPlaying = true;
+        while (keepPlaying)
         {
           System.Console.WriteLine("===== MAIN MENU =====\n");
           System.Console.WriteLine("[1] Explore Wilderness");
@@ -52,31 +52,31 @@ namespace projectWildlands
           System.Console.Write("Enter Your Choice: ");
           var menuChoice = Console.ReadLine();
           // Print user choice here - EX: Into the wilderness
-          switch(menuChoice)
+          switch (menuChoice)
           {
             case "1":
-            System.Console.WriteLine("You venture into the wilderness...");
-            break;
+              System.Console.WriteLine("You venture into the wilderness...");
+              break;
             case "2":
-            System.Console.WriteLine("Opening your research journal...");
-            break;
+              System.Console.WriteLine("Opening your research journal...");
+              break;
             case "3":
-            System.Console.WriteLine("Opening Inventory....");
-            break;
+              System.Console.WriteLine("Opening Inventory....");
+              break;
             case "4":
-            System.Console.WriteLine("Thank you playing Project Wildlands!");
-            keepPlaying = false;
-            break;
+              System.Console.WriteLine("Thank you playing Project Wildlands!");
+              keepPlaying = false;
+              break;
             default:
-            System.Console.WriteLine("Invalid Input , Please Try Again!");
-            break;
+              System.Console.WriteLine("Invalid Input , Please Try Again!");
+              break;
           }
         }
-            }
-            else
-            {
-                System.Console.WriteLine("We hope you return for your adventure soon!");
-            }
-        }
+      }
+      else
+      {
+        System.Console.WriteLine("We hope you return for your adventure soon!");
+      }
     }
+  }
 }
