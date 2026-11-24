@@ -40,6 +40,26 @@ namespace projectWildlands
         System.Console.WriteLine("Your Selection: " + adventureSelection + "\n");
         System.Console.WriteLine("=== PROJECT WILDLANDS ===\n");
         System.Console.WriteLine("Welcome, " + explorerName + " Your adventure awaits");
+
+        //Generate Creatures
+        Creature emberfox = new Creature();
+        emberfox.Name = "Emberfox";
+        emberfox.Type = "Fire";
+        emberfox.Level = 5;
+        emberfox.CaptureDifficulty = 3;
+
+        Creature mossling = new Creature();
+        mossling.Name = "Mossling";
+        mossling.Type = "Grass";
+        mossling.Level = 3;
+        mossling.CaptureDifficulty = 2;
+
+        Creature aquafin = new Creature();
+        aquafin.Name = "Aquafin";
+        aquafin.Type = "Water";
+        aquafin.Level = 7;
+        aquafin.CaptureDifficulty = 5;
+
         //Game on Value
         bool keepPlaying = true;
         while (keepPlaying)
