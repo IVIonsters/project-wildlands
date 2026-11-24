@@ -80,6 +80,11 @@ namespace projectWildlands
           {
             case "1":
               System.Console.WriteLine("You venture into the wilderness...");
+              System.Console.WriteLine("===== WILD CREATURES =====");
+              System.Console.WriteLine($"Name: {emberfox.Name}");
+              System.Console.WriteLine($"Type: {emberfox.Type}");
+              System.Console.WriteLine($"Level: {emberfox.Level}");
+              System.Console.WriteLine($"Capture Difficulty: {emberfox.CaptureDifficulty}");
               break;
             case "2":
               System.Console.WriteLine("Opening your research journal...");
