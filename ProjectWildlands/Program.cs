@@ -47,18 +47,21 @@ namespace projectWildlands
                 emberfox.Type = "Fire";
                 emberfox.Level = 5;
                 emberfox.CaptureDifficulty = 3;
+                emberfox.description = "The fiery fox creature.";
 
                 Creature mossling = new Creature();
                 mossling.Name = "Mossling";
                 mossling.Type = "Grass";
                 mossling.Level = 3;
                 mossling.CaptureDifficulty = 2;
+                mossling.description = "The moss covered pig creature.";
 
                 Creature aquafin = new Creature();
                 aquafin.Name = "Aquafin";
                 aquafin.Type = "Water";
                 aquafin.Level = 7;
                 aquafin.CaptureDifficulty = 5;
+                aquafin.description = "The transparent fin creature.";
 
                 //Game on Value
                 bool keepPlaying = true;
@@ -87,6 +90,7 @@ namespace projectWildlands
                             System.Console.WriteLine(
                                 $"Capture Difficulty: {emberfox.CaptureDifficulty}"
                             );
+                            System.Console.WriteLine($"Description: {emberfox.description}");
                             System.Console.WriteLine("---");
                             System.Console.WriteLine($"Name: {mossling.Name}");
                             System.Console.WriteLine($"Type: {mossling.Type}");
@@ -94,6 +98,7 @@ namespace projectWildlands
                             System.Console.WriteLine(
                                 $"Capture Difficulty: {mossling.CaptureDifficulty}"
                             );
+                            System.Console.WriteLine($"Description: {mossling.description}");
                             System.Console.WriteLine("---");
                             System.Console.WriteLine($"Name: {aquafin.Name}");
                             System.Console.WriteLine($"Type: {aquafin.Type}");
@@ -101,6 +106,7 @@ namespace projectWildlands
                             System.Console.WriteLine(
                                 $"Capture Difficulty: {aquafin.CaptureDifficulty}"
                             );
+                            System.Console.WriteLine($"Description: {aquafin.description}");
                             break;
                         case "2":
                             System.Console.WriteLine("Opening your research journal...");
