@@ -63,6 +63,38 @@ namespace projectWildlands
         aquafin.CaptureDifficulty = 5;
         aquafin.Description = "The transparent fin creature.";
 
+        Creature zephyrpup = new Creature();
+        zephyrpup.Name = "Zephyrpup";
+        zephyrpup.Type = "Wind";
+        zephyrpup.Level = 4;
+        zephyrpup.CaptureDifficulty = 3;
+        zephyrpup.Description = "The breezy hound creature.";
+
+        Creature pebbleback = new Creature();
+        pebbleback.Name = "Pebbleback";
+        pebbleback.Type = "Earth";
+        pebbleback.Level = 6;
+        pebbleback.CaptureDifficulty = 4;
+        pebbleback.Description = "The stone-shelled tortoise creature.";
+
+        //Create List 
+        List<Creature> creatures = new List<Creature> { };
+        creatures.Add(emberfox);
+        creatures.Add(mossling);
+        creatures.Add(aquafin);
+        creatures.Add(zephyrpup);
+        creatures.Add(pebbleback);
+
+        //Creature List Testing - Disable / Enable as needed
+        // foreach (var creature in creatures)
+        // {
+        //   System.Console.WriteLine(creature.Name);
+        // }
+
+        //Random Creature Roll Creation
+        Random rng = new Random();
+
+
         //Game on Value
         bool keepPlaying = true;
         while (keepPlaying)
@@ -83,30 +115,15 @@ namespace projectWildlands
           {
             case "1":
               System.Console.WriteLine("You venture into the wilderness...");
-              System.Console.WriteLine("===== WILD CREATURES =====\n");
-              System.Console.WriteLine($"Name: {emberfox.Name}");
-              System.Console.WriteLine($"Type: {emberfox.Type}");
-              System.Console.WriteLine($"Level: {emberfox.Level}");
-              System.Console.WriteLine(
-                  $"Capture Difficulty: {emberfox.CaptureDifficulty}/10"
-              );
-              System.Console.WriteLine($"Description: {emberfox.Description}");
-              System.Console.WriteLine("---");
-              System.Console.WriteLine($"Name: {mossling.Name}");
-              System.Console.WriteLine($"Type: {mossling.Type}");
-              System.Console.WriteLine($"Level: {mossling.Level}");
-              System.Console.WriteLine(
-                  $"Capture Difficulty: {mossling.CaptureDifficulty}/10"
-              );
-              System.Console.WriteLine($"Description: {mossling.Description}");
-              System.Console.WriteLine("---");
-              System.Console.WriteLine($"Name: {aquafin.Name}");
-              System.Console.WriteLine($"Type: {aquafin.Type}");
-              System.Console.WriteLine($"Level: {aquafin.Level}");
-              System.Console.WriteLine(
-                  $"Capture Difficulty: {aquafin.CaptureDifficulty}/10"
-              );
-              System.Console.WriteLine($"Description: {aquafin.Description}");
+              System.Console.WriteLine("Searching for wild creatures...");
+              System.Console.WriteLine("!!! WILD ENCOUNTER FOUND !!!\n");
+
+              //Random Creature Generation
+              int randomCreature = rng.Next(creatures.Count);
+              var encounteredCreature = creatures[randomCreature];
+              System.Console.WriteLine($"A wild {encounteredCreature.Name} has appeared!");
+              System.Console.WriteLine("===== CREATURE DISCOVERED =====\n");
+              System.Console.WriteLine($"Name: {encounteredCreature.Name}\nType: {encounteredCreature.Type}\nLevel: {encounteredCreature.Level}\nCapture Difficulty: {encounteredCreature.CaptureDifficulty}\nDescription: {encounteredCreature.Description}");
               break;
             case "2":
               System.Console.WriteLine("Opening your research journal...");
