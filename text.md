@@ -193,3 +193,109 @@ Enter your choice: \_
 
 Success condition: You can create three different Creature objects using your custom class, assign unique attributes to each creature, and display their information through the Explore Wilderness menu option. After displaying the creatures, the program must return to the main menu without crashing.
 Extra credit: Add a fifth attribute called Description to each creature. Display a unique description beneath its information. Then experiment with changing a creature's level after creating it and verify that the displayed value updates correctly.
+
+Objective: Expand Project Wildlands by creating a collection of creatures and implementing a randomized encounter system. Instead of displaying every creature when exploring, the game should randomly select one creature for the player to discover.
+
+Your program should:
+
+1. Keep your existing Creature class and the three creatures you've already created: Emberfox, Mossling, and Aquafin.
+2. Create a List<Creature> to store your existing creature objects in one collection.
+3. Add all three creatures to the collection.
+4. Create a Random object that your program can use to generate random encounters.
+5. Modify the Explore Wilderness option in your main menu so that selecting it generates a random creature encounter.
+6. Use the random number generator to select one creature from your collection.
+7. Display only the selected creature's information:
+   - Name
+   - Type
+   - Level
+   - Capture Difficulty
+   - Description
+8. Allow the player to return to the main menu after the encounter.
+9. Allow the player to explore repeatedly, with each exploration generating a new random selection.
+10. Ensure the program continues running until the player selects Exit Game.
+    Concepts to practice: List<T>, collections, Random, Random.Next(), list indexing, Count, variables, loops, object references, and string interpolation.
+
+Concepts you're allowed to use:
+
+- Classes and objects: Continue using your existing Creature class and individual creature objects.
+- Generic lists: Use List<Creature> to store multiple creature objects.
+- List methods: Use Add() to populate your collection.
+- Collection properties: Use Count to determine how many creatures are available.
+- Random numbers: Use Random and Next() to generate a random selection.
+- List indexing: Use [ ] to retrieve a creature from your collection.
+- Loops: Continue using while, do...while, or foreach where appropriate.
+- Conditional statements: Use if/else or switch to control program behavior.
+- String interpolation: Display the selected creature's information.
+- Console input/output: Continue interacting with the player through the console.
+  You do not need LINQ, dictionaries, inheritance, interfaces, databases, or advanced programming techniques for this challenge.
+
+Example behavior
+=== PROJECT WILDLANDS ===
+
+Welcome, Explorer Alex!
+
+===== MAIN MENU =====
+
+[1] Explore Wilderness
+[2] Research Journal
+[3] Inventory
+[4] Exit Game
+
+Enter your choice: 1
+
+You venture into the wilderness...
+
+Searching for wild creatures...
+
+!!! WILD ENCOUNTER !!!
+
+A wild Emberfox has appeared!
+
+===== CREATURE DISCOVERED =====
+
+Name: Emberfox
+Type: Fire
+Level: 5
+Capture Difficulty: 3/10
+Description: The fiery fox creature.
+
+Returning to main menu...
+
+===== MAIN MENU =====
+
+[1] Explore Wilderness
+[2] Research Journal
+[3] Inventory
+[4] Exit Game
+
+Enter your choice: 1
+
+You venture into the wilderness...
+
+Searching for wild creatures...
+
+!!! WILD ENCOUNTER !!!
+
+A wild Aquafin has appeared!
+
+===== CREATURE DISCOVERED =====
+
+Name: Aquafin
+Type: Water
+Level: 7
+Capture Difficulty: 5/10
+Description: The transparent fin creature.
+
+Returning to main menu...
+
+===== MAIN MENU =====
+
+[1] Explore Wilderness
+[2] Research Journal
+[3] Inventory
+[4] Exit Game
+
+Enter your choice: \_
+
+Success condition: Your program stores at least three creatures in a List<Creature>, randomly selects one when the player explores, and displays only that creature's attributes. The player must be able to explore repeatedly and encounter different creatures without crashing or leaving the main menu system.
+Extra credit: Add at least two more original creatures to your collection, bringing the total to five. Display the total number of available creature species somewhere in the game. As an additional experiment, use a foreach loop to display the names of all creatures in your collection in a separate testing section, then remove or disable that testing output once the encounter system works.
