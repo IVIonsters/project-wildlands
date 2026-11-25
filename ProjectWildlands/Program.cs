@@ -116,6 +116,7 @@ namespace projectWildlands
             case "1":
               System.Console.WriteLine("You venture into the wilderness...");
               System.Console.WriteLine("Searching for wild creatures...");
+              System.Console.WriteLine($"Creatures Available: {creatures.Count}");
               System.Console.WriteLine("!!! WILD ENCOUNTER FOUND !!!\n");
 
               //Random Creature Generation
